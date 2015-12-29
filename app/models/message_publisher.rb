@@ -13,25 +13,12 @@ class MessagePublisher
   # @param message
   # @return result of service
   def self.remote_call(name, message)
-    client = RabbitmqRpcClient.new *fetch_channel_and_exchange
-    client.call name, message
+    @client ||= SneakersRpcClient.new(publisher)
+    @client.call name, message
   end
 
   def self.publisher
     @publisher ||= ::Sneakers::Publisher.new
   end
 
-  # hack seankers publisher to get channel and exchange
-  def self.fetch_channel_and_exchange
-    ret = nil
-
-    publisher.instance_eval do
-      @mutex.synchronize do
-        ensure_connection! unless connected?
-      end
-      ret = [@channel, @exchange]
-    end
-
-    ret
-  end
 end
