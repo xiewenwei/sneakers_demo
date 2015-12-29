@@ -37,7 +37,7 @@ class SneakersRpcClient
     @reply_queue.subscribe(manual_ack: false) do |delivery_info, properties, payload|
       if properties[:correlation_id] == that.call_id
         that.response = payload.to_i
-        that.lock.synchronize{that.condition.signal}
+        that.lock.synchronize{ that.condition.signal }
       end
     end
   end
@@ -47,6 +47,7 @@ class SneakersRpcClient
     ret = nil
 
     @publisher.instance_eval do
+      # ensure_connection connection first
       @mutex.synchronize do
         ensure_connection! unless connected?
       end
