@@ -1,12 +1,9 @@
 class OneWorker
   include Sneakers::Worker
-  from_queue :one_name,
-             exchange_options: { type: 'topic' },
-             routing_key: ['#'],
-             exchange: 'dumy'
+  from_queue :one_name, routing_key: "demo.suprise"
 
-  def work(name)
-    puts "one: #{name}"
+  def work(message)
+    puts "one: #{message}"
     ack!
   end
 end
