@@ -1,6 +1,6 @@
 class PostsCountWorker
   include Sneakers::Worker
-  from_queue :post_count
+  from_queue :posts_count
 
   def work_with_params(msg, delivery_info, metadata)
     resp = Post.count
