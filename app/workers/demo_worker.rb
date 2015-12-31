@@ -4,7 +4,7 @@ class DemoWorker
 
   def work(message)
     puts "message is #{message}"
-    Post.create!(title: "message from mq", body: msg, published: false)
+    Post.create!(title: "message from mq", body: message, published: false)
     ack!
   end
 end

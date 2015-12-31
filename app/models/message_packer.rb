@@ -5,7 +5,7 @@ class MessagePacker
 
   def initialize(app_name = nil)
     app_name ||= 'unknown'
-    @from_info = "#{app_name} #{Socket.gethostname} #{Process.pid} "
+    @from_info = "#{app_name} #{Socket.gethostname} #{Process.pid}"
   end
 
   # Pack request data with standart json format

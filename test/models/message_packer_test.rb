@@ -32,4 +32,10 @@ class MessagePackerTest < ActiveSupport::TestCase
     assert_equal "one boohee-tiger 6355", from
     assert_equal 200, status
   end
+
+  test "pack request with nil data" do
+    message = @packer.pack_request nil
+    assert_match /\"from\":\"sneaker_demo_test/, message
+    assert_match /\"data\":null/, message
+  end
 end
