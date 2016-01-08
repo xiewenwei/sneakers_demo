@@ -1,6 +1,5 @@
 class OtherWorker
-  include Sneakers::Worker
-  include CommonWorkerHelper
+  include SneakersPacker::CommonWorker
 
   from_queue :other_name, routing_key: "demo.suprise"
 

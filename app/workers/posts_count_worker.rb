@@ -1,6 +1,5 @@
 class PostsCountWorker
-  include Sneakers::Worker
-  include RpcWorkerHelper
+  include SneakersPacker::RpcWorker
 
   from_queue :posts_count
 

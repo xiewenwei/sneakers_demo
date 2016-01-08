@@ -1,3 +1,10 @@
+PATH
+  remote: ../../sneakers_packer/
+  specs:
+    sneakers_packer (0.1.0)
+      multi_json
+      sneakers (~> 2.3.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -160,6 +167,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sneakers
+  sneakers_packer!
   spring
   sqlite3
   turbolinks

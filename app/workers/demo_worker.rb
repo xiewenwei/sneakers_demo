@@ -1,10 +1,9 @@
 class DemoWorker
-  include Sneakers::Worker
+  include SneakersPacker::CommonWorker
   from_queue :demo
 
-  def work(message)
-    puts "message is #{message}"
-    Post.create!(title: "message from mq", body: message, published: false)
-    ack!
+  def call(data)
+    puts "data is #{data}"
+    Post.create!(title: "message from mq", body: data, published: false)
   end
 end

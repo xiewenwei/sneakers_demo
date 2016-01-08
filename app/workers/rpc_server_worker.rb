@@ -1,6 +1,5 @@
 class RpcServerWorker
-  include Sneakers::Worker
-  include RpcWorkerHelper
+  include SneakersPacker::RpcWorker
 
   from_queue :rpc_server
 
