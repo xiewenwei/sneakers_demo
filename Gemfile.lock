@@ -1,7 +1,9 @@
-PATH
-  remote: ../../sneakers_packer/
+GIT
+  remote: git@git.boohee.cn:ruby/sneakers_packer.git
+  revision: 5dac8f0cb4cfc26c4db2030730e5274d203d2d53
+  branch: v0.1.1
   specs:
-    sneakers_packer (0.1.0)
+    sneakers_packer (0.1.1)
       multi_json
       sneakers (~> 2.3.5)
 

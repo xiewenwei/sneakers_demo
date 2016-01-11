@@ -34,7 +34,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bunny'
 gem 'sneakers'
-gem 'sneakers_packer', path: '../../sneakers_packer/'
+gem 'sneakers_packer',
+  git: 'git@git.boohee.cn:ruby/sneakers_packer.git',
+  branch: 'v0.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
