@@ -7,7 +7,7 @@ opts = {
   exchange: 'sneakers',
   exchange_type: :direct,
   workers: 2,
-  daemonize: false,
+  daemonize: true,
   pid: "tmp/pid/sneakers.pid",
   metrics: Sneakers::Metrics::LoggingMetrics.new
 }

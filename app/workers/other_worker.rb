@@ -4,6 +4,6 @@ class OtherWorker
   from_queue :other_name, routing_key: "demo.suprise"
 
   def call(data)
-    puts "other: #{data}"
+    logger.info "data is #{data.inspect}"
   end
 end
