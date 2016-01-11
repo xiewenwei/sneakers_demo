@@ -1,5 +1,6 @@
 
 require 'sneakers'
+require 'sneakers/metrics/logging_metrics'
 
 opts = {
   vhost: '/',
@@ -7,7 +8,8 @@ opts = {
   exchange_type: :direct,
   workers: 2,
   daemonize: false,
-  pid: "tmp/pid/sneakers.pid"
+  pid: "tmp/pid/sneakers.pid",
+  metrics: Sneakers::Metrics::LoggingMetrics.new
 }
 
 Sneakers.configure(opts)
