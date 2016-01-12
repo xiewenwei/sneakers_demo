@@ -9,7 +9,7 @@ opts = {
   workers: 2,
   daemonize: true,
   pid_path: "tmp/pids/sneakers.pid",
-  log: "log/sneakers.log",
+  log: ActiveSupport::Logger.new("#{Rails.root}/log/sneakers.log"),
   threads: 5,
   timeout_job_after: 10,
   metrics: Sneakers::Metrics::LoggingMetrics.new
@@ -18,6 +18,7 @@ opts = {
 Sneakers.configure(opts)
 
 Sneakers.logger.level = Logger::INFO
+Sneakers.logger.formatter = Sneakers::Support::ProductionFormatter
 
 SneakersPacker.configure do |conf|
   conf.rpc_timeout = 3             # rpc client timeout. default is 5 seconds.
