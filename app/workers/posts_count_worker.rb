@@ -1,7 +1,7 @@
 class PostsCountWorker
   include SneakersPacker::RpcWorker
 
-  from_queue :posts_count
+  from_queue "demo.posts_count"
 
   def call(data)
     result = Post.count

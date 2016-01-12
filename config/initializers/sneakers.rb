@@ -8,7 +8,10 @@ opts = {
   exchange_type: :direct,
   workers: 2,
   daemonize: true,
-  pid: "tmp/pid/sneakers.pid",
+  pid_path: "tmp/pids/sneakers.pid",
+  log: "log/sneakers.log",
+  threads: 5,
+  timeout_job_after: 10,
   metrics: Sneakers::Metrics::LoggingMetrics.new
 }
 

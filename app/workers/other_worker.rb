@@ -1,7 +1,7 @@
 class OtherWorker
   include SneakersPacker::CommonWorker
 
-  from_queue :other_name, routing_key: "demo.suprise"
+  from_queue "demo.other", routing_key: "demo.suprise"
 
   def call(data)
     logger.info "data is #{data.inspect}"
