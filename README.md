@@ -1,22 +1,29 @@
 ## 消息中间件使用示例
 
-### 异步任务消息
+### 初始化
 
-- 客户端
+* 第一步 初始化环境
+```ruby
+bundle install
+cp config/database.yml.example config/database.yml
+# **edit database.yml**
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
 
-`MessagePublisher.publish("demo", "hello world")`
+* 第二步 启动控制台
 
-- 服务端
+通过 `bundle exec rails c` 进入 Rails 控制台
 
-### 消息广播
+### 消息通信演示
 
-- 客户端
+* 异步任务消息
 
-- 服务端
-
-### 远程服务调用 RPC
-
-- 客户端
+`MessagePublisher.publish("demo.demo", "hello world")`
 
 
-- 服务端
+* 消息广播
+
+
+* 远程服务调用 RPC
+

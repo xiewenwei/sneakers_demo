@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 3
+  timeout: 5000
+  reconnect: false
+  username: <your db username>
+  password: <your db password>
+  host: localhost
+
+development:
+  <<: *default
+  database: sneakers_dev
+
+test:
+  <<: *default
+  database: sneakers_test
+
+production:
+  <<: *default
+  database: sneakers_dev
