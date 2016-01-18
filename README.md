@@ -19,11 +19,14 @@ bundle exec rake db:migrate
 
 * 异步任务消息
 
-`MessagePublisher.publish("demo.demo", "hello world")`
-
+  - `MessagePublisher.publish("demo.demo", "hello world")`
+  - `MessagePublisher.publish("demo.simple", "hello world")` 带最大出错次数尝试
 
 * 消息广播
 
+  - `MessagePublisher.publish("demo.suprise", "hello world")`
 
 * 远程服务调用 RPC
 
+  - `MessagePublisher.remote_call("demo.rpc_server", 102)`
+  - `MessagePublisher.remote_call("demo.posts_count", 0)`
