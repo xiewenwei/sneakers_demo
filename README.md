@@ -11,9 +11,9 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 ```
 
-* 第二步 启动控制台
-
-通过 `bundle exec rails c` 进入 Rails 控制台
+* 第二步 启动 worker 处理进程和控制台
+- 通过 `bundle exec rake sneakers:run` 启动 worker 处理进程，然后可以通过 `tail -f log/sneakers.log` 查看 worker 日志。
+- 通过 `bundle exec rails c` 进入 Rails 控制台，然后通过下面的命令进行试验。
 
 ### 消息通信演示
 
