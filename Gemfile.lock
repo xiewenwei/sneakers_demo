@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/xiewenwei/sneakers_packer.git
-  revision: a20aa4871912c7d44a1c94159a0b0428a69ff1c0
-  specs:
-    sneakers_packer (0.1.1)
-      multi_json
-      sneakers (~> 2.3.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -131,6 +123,9 @@ GEM
       serverengine (~> 1.5.11)
       thor
       thread (~> 0.1.7)
+    sneakers_packer (0.1.2)
+      multi_json
+      sneakers (~> 2.3.5)
     spring (1.4.0)
     sprockets (3.4.0)
       rack (> 1, < 3)
@@ -169,7 +164,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sneakers
-  sneakers_packer!
+  sneakers_packer
   spring
   turbolinks
   uglifier (>= 1.3.0)
