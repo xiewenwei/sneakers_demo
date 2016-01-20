@@ -21,9 +21,9 @@ Sneakers.configure(opts)
 Sneakers.logger.level = Logger::INFO #Logger::DEBUG
 Sneakers.logger.formatter = Sneakers::Support::ProductionFormatter
 
-# Sidekiq.configure_server do |config|
-#   Sneakers.configure after_fork: Proc.new { ActiveRecord::Base.establish_connection }
-# end
+Sneakers.configure_server do |config|
+  Sneakers.configure after_fork: Proc.new { ActiveRecord::Base.establish_connection }
+end
 
 SneakersPacker.configure do |conf|
   conf.rpc_timeout = 3             # rpc client timeout. default is 5 seconds.
