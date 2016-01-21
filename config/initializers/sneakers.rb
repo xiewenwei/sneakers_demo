@@ -12,6 +12,7 @@ opts = {
   pid_path: "tmp/pids/sneakers.pid",
   log: ActiveSupport::Logger.new("#{Rails.root}/log/sneakers.log"),
   threads: 5,
+  share_threads: true,
   timeout_job_after: 20,
   metrics: Sneakers::Metrics::LoggingMetrics.new
 }
