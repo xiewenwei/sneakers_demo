@@ -36,7 +36,7 @@ gem 'bunny'
 gem 'sneakers'
 gem 'sneakers_packer',
   git: 'https://github.com/xiewenwei/sneakers_packer.git',
-  branch: 'v0.1.3'
+  branch: 'v0.1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/xiewenwei/sneakers_packer.git
-  revision: e13f84faa195c128d044f40219f8b938a56c3a7e
-  branch: v0.1.3
+  revision: 8c939aa233fbf38067ab685c3bb636d06f709a2a
+  branch: v0.1.4
   specs:
-    sneakers_packer (0.1.3)
+    sneakers_packer (0.1.4)
       multi_json
-      sneakers (~> 2.3.5)
+      sneakers (>= 1.0.0)
 
 GEM
   remote: https://rubygems.org/
